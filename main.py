@@ -273,7 +273,7 @@ def renewVPS():
     #go_to(urlRenew)
     delay(1)
     cloudflareDT()
-    delay(1)
+    delay(6)
     if S('#web_address').exists():
         print('- fill web address')
         write(urlWrite, into=S('#web_address'))
