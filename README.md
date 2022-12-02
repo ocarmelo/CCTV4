@@ -1,28 +1,53 @@
-#### ✏️
-[![WHE](https://github.com/biozzl/CCTV/actions/workflows/main.yml/badge.svg)](https://github.com/biozzl/CCTV/actions/workflows/main.yml)
+## [![H](https://github.com/mybdye/H-W-SeleniumBase/actions/workflows/H.yml/badge.svg)](https://github.com/mybdye/H-W-SeleniumBase/actions/workflows/H.yml) [![W](https://github.com/mybdye/H-W-SeleniumBase/actions/workflows/W.yml/badge.svg)](https://github.com/mybdye/H-W-SeleniumBase/actions/workflows/W.yml)
+Project for SeleniumBase study.
 
-- 10.09
-  - fix 原 speech to text 网站 gg，切换到 Azure
-  - add ffmpeg mp3 to wav
-  - add renewCheck
-- 06.26 
-  - 固定版本selenium==4.2.0，原因 4.3.0 * Deprecated find_element_by_* and find_elements_by_* are now removed (#10712) https://github.com/SeleniumHQ/selenium/blob/a4995e2c096239b42c373f26498a6c9bb4f2b3e7/py/CHANGES
+#### ⏱️ TODO
+- None
 
-#### ㊙️
+#### ✏️ NOTE
+- 11.17
+  - 修复 sb.open() 概率卡死
+  - 修复 bark push url编码问题
+- 11.16
+  - renew 尝试次数 10 改到 15，全程 2~6 分钟
+  - yml 配置超时 10 分钟自动取消 action
+- 11.04
+  - ~~helium/selenium/Playwright~~ >> SeleniumBase
+  - ~~MacOS/Windows~~ >> Ubuntu
 
-|YOU SECRET NAME|YOU SECRET VALUE|
-|-----|-----|
-|`USER_ID`|你的 id for W|
-|`PASS_WD`|你的密码 for W|
-|`USER_ID_H`|你的 id for H|
-|`PASS_WD_H`|你的密码 for H|
-|`BARK_KEY`|(可选) https://api.day.app/BARK_KEY/|
-|`TG_BOT_TOKEN`|(可选) `xxxxxx:xxxxxxxxxxxxx`|
-|`TG_USER_ID`|(可选) 给 bot `@userinfobot` 发送 `/start`|
+#### 🌟️ SUGGESTION
+```diff
+!自定义schedule
+.github/workflows/H.yml
+.github/workflows/W.yml
 
-#### 📚
-- https://www.python.org/
-- https://www.selenium.dev/
-- https://www.youtube.com/watch?v=As-_hfZUyIs
-- https://github.com/actions/virtual-environments/blob/main/images/macos/macos-12-Readme.md
-- https://github.com/mherrmann/selenium-python-helium/blob/master/helium/__init__.py
+例如：
+schedule:
+    # UTC (国内 UTC+8)
+    - cron: '03 02 */2 * *'   
+    # 每2天 10:03am 执行
+    
+!规则参考
+  * * * * *
+  | | | | |
+  | | | | +----- day of week (0 - 7) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+  | | | +------- month (1 - 12) OR jan,feb,mar,apr ...
+  | | +--------- day of month (1 - 31)
+  | +----------- hour (0 - 23)
+  +------------- minute (0 - 59)
+```
+
+#### ㊙️ SECRET
+  |YOU SECRET NAME|YOU SECRET VALUE|
+  |-----|--|
+  |`URL_BASE_H` or `URL_BASE_W`|网址，至少写一个，不要带有`https://` 和 `/` |
+  |`USERNAME`|你的用户名|
+  |`PASSWORD`|你的密码|
+  |`BARK_TOKEN`|(可选) api.day.app/`BARK_TOKEN`/ 详见 https://github.com/Finb/Bark|
+  |`TG_BOT_TOKEN`|(可选) `xxxxxx:xxxxxxxxxxxxx`|
+  |`TG_USER_ID`|(可选) 给 bot `@userinfobot` 发送 `/start`|
+
+#### 📚 THANKS
+- [SeleniumBase](https://github.com/seleniumbase)
+- [Python](https://www.python.org/)
+- [PyCharm CE](https://www.jetbrains.com/pycharm/)
