@@ -1,4 +1,4 @@
-name: 'WHE'
+name: 'WE'
 
 on:
   #push:
@@ -41,35 +41,4 @@ jobs:
 
           run: |
             python3 ./main.py
-  Job_H:
-    #runs-on: macos-latest
-    runs-on: macos-12
-    timeout-minutes: 15
-    env:
-      HOMEBREW_NO_INSTALL_CLEANUP: 1
-    steps:
-        - name: 'Checkout codes'
-          uses: actions/checkout@v2
-          
-        - name: 'reinstall Chrome & install ffmpeg'
-          run: |
-            brew upgrade --cask google-chrome
-            brew install ffmpeg
-
-        - name: 'Install requirements'
-          run: |
-            pip3 install -r ./requirements.txt
-            pip3 install undetected-chromedriver
-            yes | pip3 uninstall selenium
-            pip3 install selenium==4.2.0
-            
-        - name: 'Renew'
-          env:
-            USER_ID_H: ${{ secrets.USER_ID_H }}
-            PASS_WD_H: ${{ secrets.PASS_WD_H }}
-            BARK_KEY: ${{ secrets.BARK_KEY }}
-            TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-            TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
-          run: |
-            python3 ./main_H.py
+ 
