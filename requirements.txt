@@ -1,3 +1,2 @@
-seleniumbase
-pydub
-func_timeout
+urllib3
+helium

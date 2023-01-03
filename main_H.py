@@ -17,13 +17,13 @@ from selenium.webdriver.common.by import By
 ssl._create_default_https_context = ssl._create_unverified_context
 
 try:
-    USER_ID = os.environ['USER_ID']
+    USER_ID = os.environ['USER_ID_H']
 except:
     # 本地调试用
     USER_ID = ''
 
 try:
-    PASS_WD = os.environ['PASS_WD']
+    PASS_WD = os.environ['PASS_WD_H']
 except:
     # 本地调试用
     PASS_WD = ''
@@ -385,11 +385,11 @@ def funcCAPTCHA():
 audioFile = '/audio.mp3'
 waveFile = '/audio.wav'
 imgFile = '/capture.png'
-pushTitle = 'W-Extend'
+pushTitle = 'H-Extend'
 ##
-urlWrite = urlDecode('V29pZGVuLmlk')
-urlLogin = urlDecode('aHR0cHM6Ly93b2lkZW4uaWQvbG9naW4=')
-urlRenew = urlDecode('aHR0cHM6Ly93b2lkZW4uaWQvdnBzLXJlbmV3Lw==')
+urlWrite = urlDecode('aGF4LmNvLmlk')
+urlLogin = urlDecode('aHR0cHM6Ly9oYXguY28uaWQvbG9naW4=')
+urlRenew = urlDecode('aHR0cHM6Ly9oYXguY28uaWQvdnBzLXJlbmV3Lw==')
 ##
 urlSpeech = urlDecode('aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3Byb2R1Y3RzL2NvZ25pdGl2ZS1zZXJ2aWNlcy9zcGVlY2gtdG8tdGV4dC8jZmVhdHVyZXM==')
 urlMJJ = urlDecode('aHR0cDovL21qanpwLmNm')
